@@ -9,19 +9,19 @@
 5 iv
 6 iii
 7 iii
-8 iv
-9 iv
-10 i
+8
+9 iii
+10 iv
 11 iv
 12 iii
 13 iii
 14 iii
-15 i
+15 i ii
 16 iii
-17 i
+17 iv
 18 iii
 19 iv
-20 i
+20 iii
 */
 
 ////1
@@ -497,3 +497,40 @@
 //    }
 //
 //}
+
+
+
+
+//6
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    while(n%2==0)
+    {
+        cout << "nhap vao so le :" << endl;
+    }
+
+
+
+    int a[n][n];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
