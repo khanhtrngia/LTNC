@@ -1,6 +1,3 @@
-
-
-//jsddhfjdsfkj
 /*
 1 iv
 2 iv ii
@@ -250,7 +247,7 @@
 
 
 //
-=======
+//=======
 /*
 1 iv
 2 iv ii
@@ -498,6 +495,123 @@
 //
 //}
 
+//4
+//#include <bits/stdc++.h>
+//
+//using namespace std;
+//int main()
+//{
+//    int m, n; cin >> m >> n;
+//    char a[m+2][n+2];
+//
+//    for(int i=0; i<m+2; i++)
+//    {
+//        for(int y=0; y<n+2; y++)
+//        {
+//            a[i][y]='0';
+//        }
+//    }
+//
+//    for(int i=1; i<m+1; i++)
+//    {
+//        for(int y=1; y<n+1; y++)
+//        {
+//            char c;
+//            cin >> c;
+//            a[i][y]=c;
+//        }
+//    }
+//
+//
+//    for(int i=1; i<m+1; i++)
+//    {
+//        for(int y=1; y<n+1; y++)
+//        {
+//            if(a[i][y]=='*'){continue;}
+//
+//            int k=0;
+//            for(int z=i-1; z<=i+1; z++)
+//            {
+//
+//                for(int x=y-1; x<=y+1; x++)
+//                {
+//                    if(x==y && z==i) continue;
+//                    if(a[z][x]=='*') k++;
+//                }
+//            }
+//
+//            char s=k+'0';
+//            a[i][y]=s;
+//        }
+//    }
+//
+//
+//    for(int i=1; i<m+1; i++)
+//    {
+//        for(int y=1; y<n+1; y++)
+//        {
+//            cout << a[i][y] << ' ';
+//        }
+//        cout << endl;
+//    }
+//}
+
+////5
+//#include <bits/stdc++.h>
+//
+//using namespace std;
+//
+//int main()
+//{
+//   int m, n;  cin >> m >> n;
+//   int a[m][n];
+//   int gt=1;
+//   int sm=0, sn=0;
+//   int em=m-1, en=n-1;
+//   while(em>=sm && en>=sn)
+//   {
+//       for(int i=sn; i<=en; i++)
+//       {
+//           a[sm][i]=gt++;
+//       }
+//       sm++;
+//
+//       for(int i=sm; i<=em; i++)
+//       {
+//           a[i][en]=gt++;
+//       }
+//       en--;
+//       if(sm<=em)
+//       {
+//       for(int i=en; i>=sn; i--)
+//       {
+//           a[em][i]=gt++;
+//       }
+//       em--;
+//       }
+//
+//       if(sn<=en)
+//       {
+//       for(int i=em; i>=sm; i--)
+//       {
+//           a[i][sn]=gt++;
+//       }
+//       sn++;
+//       }
+//   }
+//
+//
+//   for(int i=0; i<m; i++)
+//   {
+//       for(int y=0; y<n; y++)
+//       {
+//           cout << a[i][y] << " ";
+//       }
+//       cout << endl;
+//   }
+//   return 0;
+//}
+
 
 
 
@@ -508,14 +622,49 @@ using namespace std;
 
 int main()
 {
-    while(n%2==0)
+    int n;
+    do
     {
         cout << "nhap vao so le :" << endl;
+        cin >> n;
     }
-
-
+    while(n%2==0);
 
     int a[n][n];
+    for(int i=0; i<n; i++)
+    {
+        for(int y=0; y<n; y++)
+        {
+            a[i][y]=0;
+        }
+    }
+
+    int x=0;
+    int y=n/2;
+    int gt=1;
+
+
+    for(int i=1; i<=(n*n); i++)
+    {
+        if(a[x][y]==0)
+        {
+            a[x][y] = gt++;
+            x--; y++;
+            if(x<0){x=n-1;}
+            if(y>n-1){y=0;}
+        }
+
+
+    }
+    //in ra màn hình
+    for(int i=0; i<n; i++)
+    {
+        for(int y=0; y<n ; y++)
+        {
+            cout << a[i][y] << ' ';
+        }
+        cout << endl;
+    }
 }
 
 
