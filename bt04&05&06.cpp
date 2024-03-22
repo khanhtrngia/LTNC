@@ -232,62 +232,88 @@
 
 
 
-//6 chua xong
-#include <bits/stdc++.h>
-
-using namespace std;
-
-int main()
-{
-    int n;
-    do
-    {
-        cout << "nhap vao so le :" << endl;
-        cin >> n;
-    }
-    while(n%2==0);
-
-    int a[n][n];
-    for(int i=0; i<n; i++)
-    {
-        for(int y=0; y<n; y++)
-        {
-            a[i][y]=0;
-        }
-    }
-
-    int x=0;
-    int y=n/2;
-    int gt=1;
-
-
-    for(int i=1; i<=(n*n); i++)
-    {
-        if(a[x][y]==0)
-        {
-            a[x][y] = gt++;
-            x--; y++;
-            if(x<0){x=n-1;}
-            if(y>n-1){y=0;}
-        }
-
-        if(a[x][y]!=0)
-        {
-
-        }
-
-
-    }
-    //in ra màn hình
-    for(int i=0; i<n; i++)
-    {
-        for(int y=0; y<n ; y++)
-        {
-            cout << a[i][y] << ' ';
-        }
-        cout << endl;
-    }
-}
+////6
+//#include <bits/stdc++.h>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    int n;
+//    do
+//    {
+//        cout << "nhap vao so le :" << endl;
+//        cin >> n;
+//    }
+//    while(n%2==0);
+//
+//    int a[n][n];
+//    for(int i=0; i<n; i++)
+//    {
+//        for(int y=0; y<n; y++)
+//        {
+//            a[i][y]=0;
+//        }
+//    }
+//
+//    int x=0;
+//    int y=n/2;
+//    int gt=1;
+//
+//
+//    for(int i=1; i<=(n*n); i++)
+//    {
+//        if(a[x][y]==0)
+//        {
+//            a[x][y]=gt++;
+//            x--; y++;
+//
+//            if(x==-1 && y<n)
+//            {
+//                x=n-1;
+//            }
+//            if(y==n && x>=0)
+//            {
+//                y=0;
+//            }
+//            if(y==n && x==-1)
+//            {
+//                x+=2;
+//                y-=1;
+//            }
+//            continue;
+//        }
+//        if(a[x][y]!=0)
+//        {
+//            x+=2; y-=1;
+//            a[x][y]=gt++;
+//            x--; y++;
+//
+//            if(x==-1 && y<n)
+//            {
+//                x=n-1;
+//            }
+//            if(y==n && x>=0)
+//            {
+//                y=0;
+//            }
+//            if(y==n && x==-1)
+//            {
+//                x+=2;
+//                y-=1;
+//            }
+//        }
+//    }
+//    //in ra màn hình
+//    for(int i=0; i<n; i++)
+//    {
+//        for(int y=0; y<n ; y++)
+//        {
+//            cout << a[i][y] << ' ';
+//        }
+//        cout << endl;
+//    }
+//}
 
 
 
