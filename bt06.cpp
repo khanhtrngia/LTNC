@@ -182,6 +182,40 @@
 
 
 
+////10
+//#include <bits/stdc++.h>
+//
+//using namespace std;
+//
+//int main()
+//{
+//    int n; cin >> n;
+//    int a[n];
+//    srand(time(0));
+//    cout <<  "day gom cac so: ";
+//    for(int i=0; i<n; i++)
+//    {
+//        int x=rand()%49+0;
+//        a[i]=x;
+//        cout << a[i] << ' ';
+//    }
+//    cout << endl << "bo 3 so tong chia het cho 25 la: " << endl;
+//    for(int x=0; x<n-2; x++)
+//    {
+//        for(int y=x+1; y<n-1; y++)
+//        {
+//            for(int z=y+1; z<n; z++)
+//            {
+//                if((a[x]+a[y]+a[z])%25==0) cout << a[x] << ' ' << a[y] << ' ' << a[z] << endl;
+//            }
+//        }
+//    }
+//    return 0;
+//}
+
+
+
+
 
 
 
