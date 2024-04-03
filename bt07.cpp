@@ -1,7 +1,16 @@
 /*
-1
-2
-3
+1iii, ii
+2i
 6ii
-7
+7iii
 */
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+
+}
