@@ -213,10 +213,114 @@
 //    return 0;
 //}
 
+////11
+//#include <bits/stdc++.h>
+//
+//using namespace std;
+//
+//int to2(int n)
+//{
+//    string s;
+//    while(n>0)
+//    {
+//        int du=n%2;
+//        char c=du+'0';
+//        s+=c;
+//        n/=2;
+//    }
+//    reverse(s.begin(), s.end());
+//    int ans=stoi(s);
+//    return ans;
+//}
+//
+//
+//int to10(int n)
+//{
+//    string s=to_string(n);
+//    reverse(s.begin(), s.end());
+//    int l=s.length();
+//    int ans=0;
+//    for(int i=0; i<l; i++)
+//    {
+//        if(s[i]=='1') {ans+=pow(2, i);}
+//    }
+//    return ans;
+//}
+//
+//
+//int main()
+//{
+//    int a,b;
+//    cin >> a >> b;
+//    int x=to2(a);
+//    int y=to10(b);
+//    cout << x << ' ' << y;
+//    return 0;
+//}
 
 
-
-
+////12
+//#include <bits/stdc++.h>
+//
+//using namespace std;
+//
+//unsigned int giaiThua(int n)
+//{
+//    unsigned int ans=1;
+//    for(int i=n; i>0; i--)
+//    {
+//        ans*=i;
+//    }
+//    return ans;
+//}
+//
+//bool kiemTra(int k, int n)
+//{
+//    bool b=0;
+//    if(0<=k && k<=n && n>=1 && n<=20){b=1;}
+//    return b;
+//}
+//
+//int toHop(int k, int n)
+//{
+//    unsigned int a,b,c;
+//    a=giaiThua(n);
+//    b=giaiThua(k);
+//    c=giaiThua(n-k);
+//    int ans= a/(b*c);
+//    return ans;
+//}
+//
+//void nhapKN(int k[], int n[], int *l)
+//{
+//    while(true)
+//    {
+//        *l = *l + 1;
+//        int i=*l-1;
+//        cin >> k[i] >> n[i];
+//        if(k[i]==-1 && n[i]==-1)
+//        {
+//            *l = i;
+//            break;
+//        }
+//    }
+//}
+//int n[100], k[100];
+//int main()
+//{
+//    int *sl = new int(0);
+//    *sl=0;
+//
+//    nhapKN(k , n , sl);
+//    for(int i=0 ; i <*sl ; i++)
+//    {
+//        if(kiemTra(k[i], n[i]))
+//        {
+//            cout << toHop(k[i] , n[i]) << endl;
+//        }
+//    }
+//    return 0;
+//}
 
 
 

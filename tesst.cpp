@@ -1,15 +1,10 @@
 #include <iostream>
-int foo(int y);
-int foo(int x)
-{
-  return x+1;
-}
-int main(int argc, char** argv)
-{
-  int x = 3;
-  int y = 6;
+using namespace std;
 
-  std::cout << foo(x) << std::endl;
-
-  return 0;
+int main()
+{
+    string s;
+    char c='h';
+    s+=c;
+    cout << s;
 }
