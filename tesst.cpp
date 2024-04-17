@@ -2,23 +2,22 @@
 
 using namespace std;
 
+
+void reversee(char* s)
+{
+    int l=strlen(s);
+    for(int i=0; i< l/2; i++)
+    {
+        char temp= *(s+i);
+        *(s+i)=*(s+l-1-i);
+        *(s+l-1-i)=temp;
+    }
+}
+
+
 int main()
 {
-    int n; cin >> n;
-    int a[n];
-    for(int i=0; i<n; i++)
-    {
-        cin >> a[i];
-    }
-    int minnum=INT_MAX;
-    for(int i=0; i<n; i++)
-    {
-        for(int y=0; y<n; y++)
-        {
-            if(y==i) continue;
-            int d=abs(a[y]-a[i]);
-            minnum=min(d, minnum);
-        }
-    }
-    cout << minnum;
+    char* s="khanh";
+    reversee(s);
+    cout << s;
 }
