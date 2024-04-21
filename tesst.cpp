@@ -17,7 +17,6 @@ void reversee(char* s)
 
 int main()
 {
-    char* s="khanh";
-    reversee(s);
-    cout << s;
+    int *p = new int(0);
+    cout << *p;
 }
