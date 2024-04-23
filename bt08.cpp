@@ -2,15 +2,14 @@
 
 using namespace std;
 
-int strlenn(char* s)
+int strlenn(const char s[])
 {
-    int dem=0;
-    while(*s != NULL)
+    int ans=0;
+    while(*(s+ans)!=NULL)
     {
-        dem++;
-        *s++;
+        ans++;
     }
-    return dem;
+    return ans;
 }
 
 void strcpyy(char* s1, const char* s2)
@@ -76,6 +75,15 @@ void pad_left(char s[], int n)
     reversee(s);
 }
 
+void truncate(char a[], int n)
+{
+    int l=strlenn(a);
+    if(n<l)
+    {
+        a[n]=NULL;
+    }
+}
+
 bool is_palindromee(char s[])
 {
     bool b=1;
@@ -106,7 +114,7 @@ void trim_left(char s[])
     s[l-dem]=NULL;
 }
 
-trim_right(char s[])
+void trim_right(char s[])
 {
     reversee(s);
     int l=strlenn(s);
@@ -126,7 +134,7 @@ trim_right(char s[])
 
 int main()
 {
-    char s[]="khanh  ";
-    trim_right(s);
+    char s[]="  khanh";
+    trim_left(s);
     cout << s << ' '<< strlenn(s);
 }
